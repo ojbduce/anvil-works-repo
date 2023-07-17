@@ -17,7 +17,9 @@ class Contact(ContactTemplate):
     name = self.text_box_name.text
     email = self.text_box_email.text
     feedback = self.text_area_feedback.text
-    submit = anvil.server.call('add_feedback', name, email, feedback)
+    score_str = self.drop_down_1.selected_value
+    score = int(score_str)
+    submit = anvil.server.call('add_feedback', name, email, feedback, score)
     alert("Feedback received. Thanks!")
     return submit
 

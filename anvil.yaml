@@ -27,5 +27,8 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
+    - name: score
+      admin_ui: {order: 4, width: 200}
+      type: number
     title: feedback
 renamed: true

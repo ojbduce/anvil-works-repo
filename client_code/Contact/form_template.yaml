@@ -68,6 +68,38 @@ components:
       layout_properties: {grid_position: 'BJOOJA,SRVUPK'}
       data_bindings:
       - {property: text, code: 'self.item[''feedback'']', writeback: true}
+    - type: Label
+      properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Score us out of ten. How likely are you to recommend
+          our service to a friend? ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_question
+      layout_properties: {grid_position: 'GWNZPE,ABVHAK'}
+    - type: DropDown
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: Marks out of ten
+        border: ''
+        enabled: true
+        foreground: theme:On Primary
+        items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: theme:On Surface
+        bold: false
+        underline: false
+        include_placeholder: true
+      name: drop_down_1
+      layout_properties: {grid_position: 'GWNZPE,PUOTLG'}
+      data_bindings:
+      - {property: selected_value, code: 'self.item[''score'']', writeback: true}
     - type: Button
       properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
         foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
