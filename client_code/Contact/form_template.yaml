@@ -1,0 +1,98 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: outlined-card, col_widths: '{}'}
+    name: outlined_card_1
+    layout_properties: {grid_position: 'JSGVNS,GARFSI'}
+    components:
+    - type: Label
+      properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Feedback Form, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: 'fa:commenting-o'}
+      name: label_header
+      layout_properties: {grid_position: 'GKYFYI,IHYNGY'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Name:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_name
+      layout_properties: {grid_position: 'AWSTBW,CVTLBE'}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: 'theme:On Surface', bold: false, underline: false}
+      name: text_box_name
+      layout_properties: {grid_position: 'AWSTBW,GNKNYF'}
+      data_bindings:
+      - {property: text, code: 'self.item[''name'']', writeback: true}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'email:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_email
+      layout_properties: {grid_position: 'YUESPK,WAHYZO'}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: 'theme:On Surface', bold: false, underline: false}
+      name: text_box_email
+      layout_properties: {grid_position: 'YUESPK,YXDLBY'}
+      data_bindings:
+      - {property: text, code: 'self.item[''email'']', writeback: true}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Feedback:', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_feedback
+      layout_properties: {grid_position: 'LMMKFW,CWWAFF'}
+    - type: TextArea
+      properties: {role: null, align: left, height: 173, tooltip: '', placeholder: '...',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
+        background: 'theme:On Surface', bold: false, underline: false}
+      name: text_area_feedback
+      layout_properties: {grid_position: 'BJOOJA,SRVUPK'}
+      data_bindings:
+      - {property: text, code: 'self.item[''feedback'']', writeback: true}
+    - type: Button
+      properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Submit, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: button_submit
+      layout_properties: {grid_position: 'KRCNRW,YYFSCM'}
+      event_bindings: {click: button_submit_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - type: Link
+    properties: {role: null, url: 'https://anvil.works/', align: left, tooltip: '',
+      border: '', foreground: '', visible: true, text: Anvil, font_size: null, wrap_on: mobile,
+      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: link_1
+    layout_properties: {}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Anvil Components, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'data:image/png;base64,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'}
+  name: label_form_title
+  layout_properties: {slot: title}
