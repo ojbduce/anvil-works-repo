@@ -8,10 +8,6 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: button_1
-    properties: {text: Server Test}
-    type: Button
-    layout_properties: {grid_position: 'TLDUAH,YEKLBP'}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -35,7 +31,7 @@ components:
       layout_properties: {grid_position: 'AWSTBW,CVTLBE'}
     - type: TextBox
       properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-        border: dotted, enabled: true, foreground: 'theme:On Secondary', visible: true,
+        border: solid, enabled: true, foreground: 'theme:On Secondary', visible: true,
         text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
         italic: false, background: 'theme:On Surface', bold: false, underline: false}
       name: text_box_name
@@ -44,14 +40,14 @@ components:
       - {property: text, code: 'self.item[''name'']', writeback: true}
     - type: Label
       properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'email:', font_size: null, font: '', spacing_above: small,
+        visible: true, text: 'Email:', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_email
       layout_properties: {grid_position: 'YUESPK,WAHYZO'}
     - type: TextBox
       properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-        border: dotted, enabled: true, foreground: 'theme:On Secondary', visible: true,
+        border: solid, enabled: true, foreground: 'theme:On Secondary', visible: true,
         text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
         italic: false, background: 'theme:On Surface', bold: false, underline: false}
       name: text_box_email
@@ -71,7 +67,7 @@ components:
         align: full
         tooltip: ''
         placeholder: Marks out of ten...
-        border: dotted
+        border: solid
         enabled: true
         foreground: theme:On Primary
         items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
@@ -91,7 +87,7 @@ components:
       - {property: selected_value, code: 'self.item[''score'']', writeback: true}
     - type: TextArea
       properties: {role: null, align: left, height: 247, tooltip: '', placeholder: '...',
-        border: dotted, enabled: true, foreground: 'theme:On Secondary', visible: true,
+        border: solid, enabled: true, foreground: 'theme:On Secondary', visible: true,
         text: '', font_size: null, auto_expand: true, font: '', spacing_above: small,
         spacing_below: small, italic: false, background: 'theme:On Surface', bold: false,
         underline: false}
@@ -113,18 +109,19 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - type: Link
-    properties: {role: null, url: 'https://anvil.works/', align: left, tooltip: '',
-      border: '', foreground: 'theme:On Secondary', visible: true, text: Anvil Works,
-      font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-      icon_align: left, col_widths: '', spacing_below: small, italic: false, background: 'theme:On
-        Secondary Container', bold: false, underline: false, icon: ''}
+    properties: {role: null, url: 'https://pie-pirate-487.notion.site/New-Page-a7eadad416a74d9fbc6e3b625ffc580a?pvs=4',
+      align: left, tooltip: A link here..., border: '', foreground: 'theme:On Primary
+        Container', visible: true, text: Button, font_size: 16, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
     name: link_1
     layout_properties: {}
 - type: Label
-  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: Feedback Form, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: 'fa:bullhorn'}
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:On
+      Background', visible: true, text: 'Notion Widgets: Feedback Form', font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '', bold: true, underline: false, icon: ''}
   name: label_form_title
   layout_properties: {slot: title}
   data_bindings: []
