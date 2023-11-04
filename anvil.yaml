@@ -5,7 +5,7 @@ services:
   server_config: {}
 startup: {type: form, module: Contact}
 package_name: Anvil_Web_Form_Component
-allow_embedding: false
+allow_embedding: true
 name: Anvil_Web_Form_Component
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: Anvil_Web_Form_Component, description: Anvil_Web_Form_Component}
